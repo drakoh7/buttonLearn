@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">buttonHello</string>
+    <string name="hello">Поздороваться</string>
+    <string name="countVoron">Считаем ворон</string>
+</resources>
