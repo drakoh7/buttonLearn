@@ -10,12 +10,21 @@ public class MainActivity extends AppCompatActivity {
 
     private Button mCrowsCounterButton;
     private int mCount = 0;
+    private TextView mInfoTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mCrowsCounterButton = (Button) findViewById(R.id.buttonCrowsCounter);
+        mInfoTextView = (TextView)findViewById(R.id.textView);
+
+        mCrowsCounterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mInfoTextView.setText("Я насчитал " + ++mCount + " ворон");
+            }
+        });
     }
 
     public void onClick(View view) {
